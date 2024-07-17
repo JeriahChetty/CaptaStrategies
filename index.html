@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload CSV Files</title>
+</head>
+<body>
+    <h1>Upload CSV Files</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="sales">Sales File:</label>
+        <input type="file" id="sales" name="sales" required><br><br>
+        <label for="products">Products File:</label>
+        <input type="file" id="products" name="products" required><br><br>
+        <label for="stores">Stores File:</label>
+        <input type="file" id="stores" name="stores" required><br><br>
+        <label for="customers">Customers File:</label>
+        <input type="file" id="customers" name="customers" required><br><br>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Analysis Results</h1>
+        
+        <h2>Descriptive Statistics</h2>
+        <pre>{{ results['desc_stats'] }}</pre>
+
+        <h2>Monthly Sales Plot</h2>
+        <img src="{{ url_for('static', filename='monthly_sales.png') }}" alt="Monthly Sales">
+
+        <h2>Sales by Category</h2>
+        <pre>{{ results['sales_by_category'] }}</pre>
+
+        <h2>Sales by Store</h2>
+        <pre>{{ results['sales_by_store'] }}</pre>
+
+        <h2>Sales by Customer Membership</h2>
+        <pre>{{ results['sales_by_customer_membership'] }}</pre>
+
+        <h2>Sales by Customer Age</h2>
+        <pre>{{ results['sales_by_customer_age'] }}</pre>
+
+        <h2>Sales by Customer Gender</h2>
+        <pre>{{ results['sales_by_customer_gender'] }}</pre>
+
+        <h2>Top Products</h2>
+        <pre>{{ results['top_products'] }}</pre>
+
+        <h2>Top Categories</h2>
+        <pre>{{ results['top_categories'] }}</pre>
+
+        <h2>Best Stores</h2>
+        <pre>{{ results['best_stores'] }}</pre>
+
+        <h2>Customer Behavior</h2>
+        <pre>{{ results['customer_behavior'] }}</pre>
+
+        <h2>Promotions Impact</h2>
+        <pre>{{ results['promotions_impact'] }}</pre>
+
+        <h2>Recommendations</h2>
+        <pre>{{ results['recommendations'] }}</pre>
+
+        <h2>Purchase Frequency by Age Group and Gender</h2>
+        <div>{{ results['purchase_frequency_by_age_gender']|safe }}</div>
+
+        <h2>Customer Behavior Table</h2>
+        <div>{{ results['customer_behavior_table']|safe }}</div>
+
+        <h2>Merged and Cleaned Data</h2>
+        <div>{{ results['merged_cleaned_data']|safe }}</div>
+
+        <br>
+        <a href="{{ url_for('export') }}" class="btn btn-primary">Download Cleaned Data</a>
+    </div>
+</body>
+</html>
+
+
+
+
